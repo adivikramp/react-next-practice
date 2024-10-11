@@ -3,7 +3,7 @@ import { useState } from "react";
 import { tempWatchedData } from "../../data/tempWatchedData.js";
 
 import Summary from "../Summary/Summary.jsx";
-import SingleWatchedMovie from "../SingleWatchedMovie/SingleWatchedMovie.jsx";
+import SingleWatchedMovie from "./SingleWatchedMovie.jsx";
 
 const WatchedMovies = () => {
   const [watched, setWatched] = useState(tempWatchedData);

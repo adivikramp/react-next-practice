@@ -1,5 +1,5 @@
 import { useState } from "react";
-import WatchedMovies from "../WatchedMovies/WatchedMovies";
+import WatchedMovies from "./WatchedMovies";
 
 const WatchedListBox = () => {
   const [isOpen2, setIsOpen2] = useState(true);

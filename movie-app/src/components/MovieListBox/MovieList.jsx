@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { tempMovieData } from "../../data/tempMovieData";
-import SingleMovie from "../SingleMovie/SingleMovie";
+import SingleMovie from "./SingleMovie";
 
 const MovieList = () => {
   const [movies, setMovies] = useState(tempMovieData);

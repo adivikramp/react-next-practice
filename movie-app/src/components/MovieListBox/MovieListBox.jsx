@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MovieList from "../MovieList/MovieList";
+import MovieList from "./MovieList";
 
 const MovieListBox = () => {
   const [isOpen1, setIsOpen1] = useState(true);
