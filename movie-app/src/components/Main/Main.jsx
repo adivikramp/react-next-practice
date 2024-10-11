@@ -1,13 +1,9 @@
-import MovieListBox from "../MovieListBox/MovieListBox";
-import WatchedListBox from "../WatchedListBox/WatchedListBox";
+/* eslint-disable react/prop-types */
+// import MovieListBox from "../MovieListBox/MovieListBox";
+// import WatchedListBox from "../WatchedListBox/WatchedListBox";
 
-const Main = () => {
-  return (
-    <main className="main">
-      <MovieListBox />
-      <WatchedListBox />
-    </main>
-  );
+const Main = ({ children }) => {
+  return <main className="main">{children}</main>;
 };
 
 export default Main;

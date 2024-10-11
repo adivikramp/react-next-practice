@@ -1,13 +1,8 @@
-import { useState } from "react";
-
-import { tempWatchedData } from "../../data/tempWatchedData.js";
-
+/* eslint-disable react/prop-types */
 import Summary from "../Summary/Summary.jsx";
 import SingleWatchedMovie from "./SingleWatchedMovie.jsx";
 
-const WatchedMovies = () => {
-  const [watched, setWatched] = useState(tempWatchedData);
-
+const WatchedMovies = ({ watched }) => {
   return (
     <>
       <Summary watched={watched} />
