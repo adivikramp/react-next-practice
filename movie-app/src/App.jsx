@@ -13,6 +13,7 @@ import Numresults from "./components/Navbar/Numresults";
 import MovieList from "./components/MovieListBox/MovieList";
 import Box from "./components/Box/Box";
 import WatchedMovies from "./components/WatchedListBox/WatchedMovies";
+import StarRating from "./components/StarComponent/StarRating";
 
 export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
@@ -33,6 +34,7 @@ export default function App() {
 
       <Main>
         <Box>
+          <StarRating maxRating={5} />
           <MovieList movies={movies} />
         </Box>
         <Box>
