@@ -35,6 +35,7 @@ export default function App() {
       <Main>
         <Box>
           <StarRating maxRating={5} />
+          <StarRating maxRating={8} size={24} color="red" />
           <MovieList movies={movies} />
         </Box>
         <Box>
