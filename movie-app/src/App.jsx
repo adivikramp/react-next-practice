@@ -15,6 +15,17 @@ import Box from "./components/Box/Box";
 import WatchedMovies from "./components/WatchedListBox/WatchedMovies";
 import StarRating from "./components/StarComponent/StarRating";
 
+function Test() {
+  const [movieRating, setMovieRating] = useState(0);
+
+  return (
+    <>
+      <StarRating maxRating={10} onSetRating={setMovieRating} size={24} />
+      <p>This movie is rated {movieRating} stars</p>
+    </>
+  );
+}
+
 export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
@@ -34,8 +45,16 @@ export default function App() {
 
       <Main>
         <Box>
+          <Test />
           <StarRating maxRating={5} />
+          <StarRating maxRating={5} defaultRating={3} />
           <StarRating maxRating={8} size={24} color="red" />
+          <StarRating
+            maxRating={3}
+            size={24}
+            color="green"
+            messages={["bad", "OK", "Good"]}
+          />
           <MovieList movies={movies} />
         </Box>
         <Box>
