@@ -1,8 +1,5 @@
-import { useState } from "react";
-
-const Searchbar = () => {
-  const [query, setQuery] = useState("");
-
+/* eslint-disable react/prop-types */
+const Searchbar = ({query, setQuery}) => {
   return (
     <input
       className="search"
