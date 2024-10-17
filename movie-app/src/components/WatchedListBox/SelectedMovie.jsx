@@ -48,6 +48,7 @@ const SelectedMovie = ({
     };
 
     onAddedWatched(newWatchedMovie);
+    onCloseSelectedMovie();
   }
 
   useEffect(() => {
