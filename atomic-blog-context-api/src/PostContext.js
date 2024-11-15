@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import { createContext, useContext, useState } from "react";
+import { createContext, useCallback, useContext, useState } from "react";
 
 function createRandomPost() {
   return {
@@ -25,9 +25,9 @@ function PostProvider({ children }) {
         )
       : posts;
 
-  function handleAddPost(post) {
-    setPosts((posts) => [post, ...posts]);
-  }
+  const handleAddPost = useCallback(function handleAddPost(post) {
+    setPosts((posts) => [...posts, post]);
+  }, []);
 
   function handleClearPosts() {
     setPosts([]);
