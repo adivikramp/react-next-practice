@@ -32,9 +32,9 @@ export function createCustomer(fullName, nationalID) {
   };
 }
 
-export function updateName(fullName) {
+export function updateCustomer(fullName) {
   return {
-    type: "customer/updateName",
+    type: "customer/updateCustomer",
     payload: fullName,
   };
 }
