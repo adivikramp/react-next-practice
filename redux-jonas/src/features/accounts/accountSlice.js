@@ -2,7 +2,6 @@ const initialStateAccount = {
   balance: 0,
   loan: 0,
   loanPurpose: "",
-  // currency: "",
 };
 
 export default function accountReducer(state = initialStateAccount, action) {
