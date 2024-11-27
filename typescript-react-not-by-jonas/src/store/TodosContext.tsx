@@ -1,3 +1,5 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import React, { useState } from "react";
 import { TodoClass } from "../models/todo";
 
@@ -10,10 +12,10 @@ type TodosContextObj = {
 export const TodosContext = React.createContext<TodosContextObj>({
     items: [],
     addTodo: () => { },
-    removeTodo: (id: string) => { }
+    removeTodo: () => { }
 });
 
-const TodosContextProvider: React.FC = (props) => {
+const TodosContextProvider: React.FC<React.PropsWithChildren<{}>> = (props) => {
     const [todos, setTodos] = useState<TodoClass[]>([])
 
     const handleAddTodo = (todoText: string) => {
