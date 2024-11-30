@@ -1,16 +1,29 @@
-import Logo from "./components/Logo";
-import Navbar from "./components/Navbar";
-import "./globals.css";
+import Logo from "./_components/Logo";
+import Navbar from "./_components/Navbar";
+
+import { Josefin_Sans } from "next/font/google";
+
+const josefin = Josefin_Sans({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+import "@/app/_styles/globals.css";
 
 export const metadata = {
-  title: "Wild Oasis Nextjs App",
-  description: "Wild Oasis by create next app",
+  title: {
+    template: "The Wild Oasis | %s",
+    default: "Welcome to the Wild Oasis",
+  },
+  description: "Best Hotel Booking Website",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body
+        className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen`}
+      >
         <header>
           <Logo />
           <Navbar />

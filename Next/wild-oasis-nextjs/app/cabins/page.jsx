@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Cabins",
+};
+
 const Cabins = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await res.json();
