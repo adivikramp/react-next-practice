@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prod": "next build && next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -14,6 +15,7 @@
     "date-fns": "^4.1.0",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
+    "react-day-picker": "^9.4.3",
     "react-dom": "19.0.0-rc-66855b96-20241106"
   },
   "devDependencies": {
