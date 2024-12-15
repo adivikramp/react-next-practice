@@ -5,7 +5,8 @@ import { getCabin, getCabins } from "@/app/_lib/data-service";
 import { Suspense } from "react";
 
 export async function generateMetadata({ params }) {
-  const { name } = await getCabin(params.cabinId);
+  const { cabinId } = await params;
+  const { name } = await getCabin(cabinId);
   return { title: `Cabin ${name}` };
 }
 
@@ -31,8 +32,8 @@ export default async function CabinPage({ params }) {
   // ]);
 
   // Method - 2: Create separate components to fetch data for different info. Like make one component with components that require data from getSettings and fetch settings data in that component.
-
-  const cabin = await getCabin(params.cabinId);
+  const { cabinId } = await params;
+  const cabin = await getCabin(cabinId);
 
   return (
     <div className="max-w-6xl mx-auto mt-8">
